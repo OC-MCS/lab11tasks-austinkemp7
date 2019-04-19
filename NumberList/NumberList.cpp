@@ -8,7 +8,7 @@ using namespace std;
 // value pased into num, to the end of the list.   *
 //**************************************************
 
-void NumberList::appendNode(double num)
+void NumberList::appendNode(int num)
 {
 	ListNode *newNode;  // To point to a new node
 	ListNode *nodePtr;  // To move through the list
@@ -33,6 +33,7 @@ void NumberList::appendNode(double num)
 
 		// Insert newNode as the last node.
 		nodePtr->next = newNode;
+		tail = newNode;
 	}
 }
 
@@ -66,7 +67,7 @@ void NumberList::displayList() const
 // num copied to its value member.                 *
 //**************************************************
 
-void NumberList::insertNode(double num)
+void NumberList::insertNode(int num)
 {
 	ListNode *newNode;					// A new node
 	ListNode *nodePtr;					// To traverse the list
@@ -119,7 +120,7 @@ void NumberList::insertNode(double num)
 // deleted from the list and from memory.          *
 //**************************************************
 
-void NumberList::deleteNode(double num)
+void NumberList::deleteNode(int num)
 {
 	ListNode *nodePtr;       // To traverse the list
 	ListNode *previousNode = nullptr;  // To point to the previous node
